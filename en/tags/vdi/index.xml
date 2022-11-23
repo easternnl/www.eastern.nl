@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vdi on Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/tags/vdi/</link>
+    <description>Recent content in vdi on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Wed, 06 Feb 2019 00:00:00 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/tags/vdi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VDI Performance Summit</title>
+      <link>https://www.eastern.nl/en/blog/vdi-performance-summit/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/vdi-performance-summit/</guid>
+      <description>&lt;p&gt;On 29th january I visited the VDI Performance Summit which was organized by LoginVSI. Login VSI provides performance insights for virtualized desktop environments such as Citrix XenApp, XenDesktop, Microsoft RDS and VMware Horizon View.
+The summit was, of course, organized around the LoginVSI tool. In this blog post I will tell you the 5 quick takes of the conference.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt; &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

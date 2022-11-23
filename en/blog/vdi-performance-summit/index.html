@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+        <meta name = "robots" content = "index"><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    
+    
+    <title>Eastern.nl - Performance Engineering done with passion | VDI Performance Summit</title>
+</head><body class="d-flex flex-column min-vh-100"><div class="container">
+    <div class="row">
+        <div class="col-lg-12 p-0">
+            <nav class="navbar navbar-expand-sm navbar-light ">
+                
+                <a class="navbar-brand" href="/"><img width="175" height="48"  src="/images/easternlogo.png" alt="" ></a>
+
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-left" id="collapsibleNavbar">
+
+                    
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/">
+                                
+                                
+                                <i data-feather="home"></i> 
+                                
+                                
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/services">
+                                
+                                
+                                <i data-feather="services"></i> 
+                                
+                                
+                                Services
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/aboutme">
+                                
+                                
+                                <i data-feather="about-me"></i> 
+                                
+                                
+                                About me
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/references">
+                                
+                                
+                                <i data-feather="references"></i> 
+                                
+                                
+                                References
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/contact">
+                                
+                                
+                                <i data-feather="contact"></i> 
+                                
+                                
+                                Contact
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/blog/">
+                                
+                                
+                                <i data-feather="pen-tool"></i> 
+                                
+                                
+                                Blog
+                            </a>
+                        </li>
+                        
+
+                        
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="content">
+<div class="bg-dark">
+    <div class="container">
+        <div class="row bg-dark text-white" >
+            <div class="col-md-12">
+                <h1>VDI Performance Summit</h1>
+            </div>
+        </div>
+        <div class="row bg-dark text-white" >
+            <div class="col-md-8 text-secondary mt-1 mb-3">
+                Visiting the Login VSI&#39;s VDI Performance summit in Amsterdam Arena
+            </div>
+            <div class="col-md-4 text-secondary mb-2">
+
+                
+                    Tags:
+
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/vdi">vdi</a>
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/performance">performance</a>
+                    
+                
+
+
+                
+                    
+                    
+
+                    | <time datetime="2019-02-06">Feb 6, 2019</time>
+
+                
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row text-dark bg-white" >
+        <div class="col-12">
+
+            <p>On 29th january I visited the VDI Performance Summit which was organized by LoginVSI. Login VSI provides performance insights for virtualized desktop environments such as Citrix XenApp, XenDesktop, Microsoft RDS and VMware Horizon View.
+The summit was, of course, organized around the LoginVSI tool. In this blog post I will tell you the 5 quick takes of the conference.</p>
+<p><a href="images/vdi-performance-summit.jpg"><img src="images/vdi-performance-summit.jpg" alt=""></a> <a href="images/i-love-a-good-performance.jpg"><img src="images/i-love-a-good-performance.jpg" alt=""></a></p>
+<h1 id="1-automated-testing-with-loginvsi">1. Automated testing with LoginVSI</h1>
+<p>When you put effort in repeatable tests, you can run the test several time’s and see if the performance of the VDI/SBC infrastructure is increasing, stable or decreasing. This is of course for each performance test, but I think in VDI environments it is not common to run a performance test each month or quarter.
+As performance tests are always about reducing risks in production. To avoid huge costs, a good scenario is to run the test against one host and see if you have the desired results in terms of response time and capacity for one host.</p>
+<h1 id="2-performance-impact-of-different-windows-versions-on-your-vdi-infrastructure">2. Performance impact of different Windows versions on your VDI infrastructure</h1>
+<p>With the introduction of Windows 10 Microsoft is releasing new versions of Windows more often. Mark Plettenberg presented the following sheet in his keynote.</p>
+<p><a href="images/single-server-scalability.jpg"><img src="images/single-server-scalability.jpg" alt=""></a></p>
+<p>I found it really interesting to see the decrease in number of users per server. The decrease was also related to the Meltdown and Spectre patches introduced in those Windows versions.</p>
+<h1 id="3-removing-all-windows-store-apps-will-give-a-huge-performance-boost">3. Removing all Windows Store apps will give a huge performance boost</h1>
+<p>Rob Beekmans showed us that removing the built-in Windows App (all the games and other things you probably don’t need except the calculator) will give the most of the optimization. All the other minor things will not result in a huge improvement of users per server / and or lower the cpu usage.</p>
+<p><a href="images/more-users-per-server.jpg"><img src="images/more-users-per-server.jpg" alt=""></a></p>
+<p>More Users per Server</p>
+<p><a href="images/cpu.jpg"><img src="images/cpu.jpg" alt=""></a></p>
+<p>Less CPU usage</p>
+<p>Someone, I forgot who said this, stated that in a performance test the background task of Windows will not run because the system does not get idle. So that needs to be considered before only implementing this optimization in a production environment.</p>
+<h1 id="4-power-settings-in-bios-can-affect-the-performance-test">4. Power settings in BIOS can affect the performance test</h1>
+<p>Servers running on a non-high performance profile in the BIOS / Windows settings will give weird results in the performance tests.</p>
+<p>Run all the servers in high-performance mode, which is more economic and sustainable than adding more servers to the environment.</p>
+<h1 id="5-which-tools-do-the-experts-use-to-tune--prove-the-performance">5. Which tools do the experts use to tune &amp; prove the performance?</h1>
+<p><a href="images/tools.jpg"><img src="images/tools.jpg" alt=""></a></p>
+<p>This were the tools mentioned in the keynote, but there were also some additions from the audience:</p>
+<pre><code>WANem – Opensource WAN emulator which also runs in virtual environment – http://wanem.sourceforge.net/
+Grafana &amp; Influx – The open platform for beautiful analytics and monitoring – https://grafana.com/ https://www.influxdata.com/
+FastStone Capture – Screen capture and video recorder – http://www.faststone.org/FSCaptureDetail.htm
+Visual ESXtop – Visualize ESXtop files – https://labs.vmware.com/flings/visualesxtop
+</code></pre>
+<h1 id="verdict">Verdict</h1>
+<p>It was an interesting day in the Johan Cruijff ArenA and I hope that the event will be organized again with new content in an another year.</p>
+<p><a href="images/amsterdam-arena.jpg"><img src="images/amsterdam-arena.jpg" alt=""></a></p>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+        </div><footer class="mt-auto bg-dark">
+    <div class="container">
+        
+        <div class="row bg-dark text-white mt-3">
+
+
+                    <div class="col-lg-3">
+                        <p class="text-uppercase">About Me</p>
+                        <p>
+                            <i class="fas fa-info"></i> Erik van Oost has been an IT-freelancer since 2003. His passion for working with computers brings him to many places where he works with a lot of enjoyment for the organizations who hire him.
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="text-uppercase">Contact</p>
+                        <p>
+                            <i class="fas fa-phone-volume"></i> <a class="text-white" href="tel:+31655118025">+31 6 55 118 025</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <a class="text-white" href="mailto:erik@eastern.nl">erik@eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-globe"></i> <a class="text-white" href="http://www.eastern.nl">www.eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker"></i> Balustrade 20 7325 GP Apeldoorn, The Netherlands
+                        </p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <p class="text-uppercase">Follow on</p>
+                        <p>
+                            <i class="fab fa-twitter"></i> <a class="text-white" href="https://twitter.com/eastern_nl">Twitter</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-linkedin-in"></i> <a class="text-white" href="http://nl.linkedin.com/in/erikvanoost">LinkedIn</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-github"></i> <a class="text-white" href="http://github.com/easternnl/">Github</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-clipboard"></i> <a class="text-white" href="http://pastebin.com/u/easternnl">Pastebin</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-skype"></i> <a class="text-white" href="skype:easternnl?call">Skype</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-docker"></i> <a class="text-white" href="https://hub.docker.com/u/easternnl">Docker Hub</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-stack-overflow"></i> <a class="text-white" href="https://stackoverflow.com/users/9484751/easternnl">Stack Overflow</a>
+                        </p>
+                    </div>
+
+                   <div class="col-lg-3">
+                        <p class="text-uppercase"> Blog</p>
+                        
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/vdi-performance-summit/">VDI Performance Summit</a></p>
+                            
+                       
+                            
+                       
+                    </div>
+
+
+
+        </div>
+        <div class="row bg-dark text-white">
+            <hr>
+        </div>
+        <div class="row bg-dark text-white small">
+
+                <div class="col-lg-4">
+                    <p>Copyright (C) Eastern 2005 - 2022</p>
+                </div>
+                <div class="col-lg-8 text-right">
+                    <p class="text-uppercase">
+                        
+                        
+
+                        <a class="text-white" href="/en/">
+                            
+                            
+                            <i data-feather="home"></i> 
+                            
+                            
+                            Home
+                        </a>
+                        
+
+                        <a class="text-white" href="/en/pages/services">
+                            
+                            
+                            <i data-feather="services"></i> 
+                            
+                            
+                            Services
+                        </a>
+                        
+
+                        <a class="text-white" href="/en/pages/aboutme">
+                            
+                            
+                            <i data-feather="about-me"></i> 
+                            
+                            
+                            About me
+                        </a>
+                        
+
+                        <a class="text-white" href="/en/pages/references">
+                            
+                            
+                            <i data-feather="references"></i> 
+                            
+                            
+                            References
+                        </a>
+                        
+
+                        <a class="text-white" href="/en/pages/contact">
+                            
+                            
+                            <i data-feather="contact"></i> 
+                            
+                            
+                            Contact
+                        </a>
+                        
+
+                        <a class="text-white" href="/en/blog/">
+                            
+                            
+                            <i data-feather="pen-tool"></i> 
+                            
+                            
+                            Blog
+                        </a>
+                        
+                        <a class="text-white" href="/documents/nederland-ict-voorwaarden-2014.pdf">Voorwaarden</a>
+                    </p>
+                </div>
+
+
+
+        </div>
+    </div>
+</footer>
+<script src="/js/jquery-3.6.1.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/feather.min.js"></script></body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/</link>
+    <description>Recent content on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Wed, 21 Sep 2022 14:05:36 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contact</title>
+      <link>https://www.eastern.nl/en/pages/contact/</link>
+      <pubDate>Wed, 21 Sep 2022 14:05:36 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/pages/contact/</guid>
+      <description> Contact Mobile: +31 6 55 118 025
+Email: erik@eastern.nl
+Website: http://www.eastern.nl Mailing adresss Balustrade 20
+7325 GP Apeldoorn
+The Netherlands Other information IBAN: NL40RABO0393346072
+KvK: 08132235
+VAT: NL002033564B54 Terms and conditions Nederland ICT 2014 </description>
+    </item>
+    
+    <item>
+      <title>References</title>
+      <link>https://www.eastern.nl/en/pages/references/</link>
+      <pubDate>Wed, 21 Sep 2022 14:05:29 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/pages/references/</guid>
+      <description>Ik heb Erik leren kennen tijdens mijn rol als projectmanager ‘Ontwikkeling werkplek infrastructuur’ bij het VUmc. Erik heeft een belangrijke rol gespeeld in ons skilled testteam, waarbij Erik verantwoordelijk was voor de uitvoering en, bij afwezigheid van de testmanager, de coördinatie van de testen. Erik heeft goede ICT infrastructurele kennis, en weet zijn kennis goed te combineren met collega’s. Erik is praktisch, heeft een gezonde drive voor kwaliteit, kan prioriteiten stellen en staat open voor veranderingen in planningen.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://www.eastern.nl/en/pages/aboutme/</link>
+      <pubDate>Wed, 21 Sep 2022 14:04:51 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/pages/aboutme/</guid>
+      <description>My name is Erik van Oost, living in Apeldoorn – The Netherlands and IT-freelancer since 2003. My passion for IT brings me to places where I work with much enjoyment for organizations who hire me.
+I have more than 10 years of work experience within IT. In the last years, I have done several large and small projects using multiple disciplines of the profession I have experience.
+For large enterprises with many workplaces I participated in the entire area around desktop life cycle management, also called IT workplace.</description>
+    </item>
+    
+    <item>
+      <title>VDI Performance Summit</title>
+      <link>https://www.eastern.nl/en/blog/vdi-performance-summit/</link>
+      <pubDate>Wed, 06 Feb 2019 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/vdi-performance-summit/</guid>
+      <description>&lt;p&gt;On 29th january I visited the VDI Performance Summit which was organized by LoginVSI. Login VSI provides performance insights for virtualized desktop environments such as Citrix XenApp, XenDesktop, Microsoft RDS and VMware Horizon View.
+The summit was, of course, organized around the LoginVSI tool. In this blog post I will tell you the 5 quick takes of the conference.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt; &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
