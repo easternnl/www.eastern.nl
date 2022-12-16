@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>appv on Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/tags/appv/</link>
+    <description>Recent content in appv on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Fri, 19 Aug 2016 00:00:00 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/tags/appv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Run and enable Microsoft App-V client on Windows 10 Anniversary Update</title>
+      <link>https://www.eastern.nl/en/blog/run-or-enable-microsoft-app-v-client-on-windows-10-anniversary-update/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/run-or-enable-microsoft-app-v-client-on-windows-10-anniversary-update/</guid>
+      <description>What is the problem with App-V on Windows 10 Anniversary Update Microsoft released App-V as an add-on for Windows in the MDOP (Microsoft Desktop Optimization Pack). So I also run App-V to have some hands on experience with applications on my Windows 8.1 and later Windows 10 installation. Last week I upgraded to Windows 10 Anniversary Update 1607, and I run in to errors with App-V applications. My Total Commander session lost all the configuration settings, slow starting or even not starting App-V applications.</description>
+    </item>
+    
+  </channel>
+</rss>

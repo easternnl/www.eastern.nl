@@ -13,11 +13,12 @@
       <pubDate>Wed, 21 Sep 2022 14:05:36 +0200</pubDate>
       
       <guid>https://www.eastern.nl/nl/pages/contact/</guid>
-      <description>Contact Mobiel: +31 6 55 118 025
+      <description> Contact Mobiel: +31 6 55 118 025
 Email: erik@eastern.nl
 Website: http://www.eastern.nl Post adres Balustrade 20
 7325 GP Apeldoorn
 Nederland Overige informatie IBAN: NL40RABO0393346072
+BIC: RABONL2U
 KvK: 08132235
 BTW: NL002033564B54 Algemene voorwaarden Nederland ICT 2014 </description>
     </item>
@@ -37,9 +38,17 @@ BTW: NL002033564B54 Algemene voorwaarden Nederland ICT 2014 </description>
       <pubDate>Wed, 21 Sep 2022 14:04:51 +0200</pubDate>
       
       <guid>https://www.eastern.nl/nl/pages/aboutme/</guid>
-      <description>Mijn naam is Erik van Oost, woon in Apeldoorn en sinds 2003 freelancer in de IT-branche. Mijn passie voor IT brengt mij op plaatsen waar ik mij met plezier inzet voor allerhande organisaties die mij inhuren.
-Ik ben al bijna 10 jaar gespecialiseerd in performance testen en engineering. Daarbij heb ik veel ervaring in het ontwerpen, programmeren en analyseren van performance testen.
-Daarvoor heb ik allerlei functies binnen de IT vervult, o.</description>
+      <description>Mijn naam is Erik van Oost, woon in Apeldoorn en sinds 2003 freelancer in de IT-branche. Mijn passie voor IT brengt mij op plaatsen waar ik mij met plezier inzet voor verschillende organisaties die mij inhuren.
+Ik werk in de IT sinds het jaar 2000 en heb verschillende functies gehad. De laatste 7 jaar ben ik gespecialiseerd in performance testen en engineering. Daarbij heb ik veel ervaring opgedaan in het ontwerpen, programmeren en analyseren van performance testen.</description>
+    </item>
+    
+    <item>
+      <title>Diensten</title>
+      <link>https://www.eastern.nl/nl/pages/services/</link>
+      <pubDate>Wed, 21 Sep 2022 14:04:51 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/nl/pages/services/</guid>
+      <description>Performance testing Wij bieden het complete traject om ervoor te zorgen dat een applicatie de juiste performance heeft. Het traject start met een intake, verzamelen van alle eisen, het maken van een load model voor de test, het scripten van de applicatie in een tool zoals JMeter, LoadRunner en als nodig extra scripting om de test te ondersteunen in Python, Bash, Rexx, PowerShell of een andere scripting taal. Voor het opzetten van goede monitoring zijn Telegraf, Influx en Grafana onze voorkeurstools, maar we staan ook open voor andere tools.</description>
     </item>
     
   </channel>

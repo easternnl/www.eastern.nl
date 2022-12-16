@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="How to automate Windows workplace with PowerShell. Run it each day to determine if they environment is stable.">
+
+
+    
+        <meta name = "robots" content = "index"><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    
+    
+    <title>Eastern.nl - Performance Engineering done with passion | Workplace and VDI test automation with PowerShell</title>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@easternnl" />
+    <meta name="twitter:creator" content="@easternnl" />
+    <meta name="twitter:title" content="Eastern.nl - Performance Engineering done with passion | Workplace and VDI test automation with PowerShell">
+    <meta name="twitter:description" content="How to automate Windows workplace with PowerShell. Run it each day to determine if they environment is stable.">
+    <meta name="twitter:image" content="https://www.eastern.nl/twitter-image.webp">
+
+    <meta property="og:title" content="Eastern.nl - Performance Engineering done with passion | Workplace and VDI test automation with PowerShell">
+    <meta property="og:url" content="https://www.eastern.nl/en/blog/workplace-and-vdi-test-automation-with-powershell/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.eastern.nl/og-image.webp">
+    <meta property="og:site_name" content="Eastern.nl - Performance Engineering done with passion"/>
+    <meta property="og:description" content="How to automate Windows workplace with PowerShell. Run it each day to determine if they environment is stable.">
+
+
+
+</head><body class="d-flex flex-column min-vh-100"><div class="container">
+    <div class="row">
+        <div class="col-lg-12 p-0">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                
+                <a class="navbar-brand" aria-label="Home" href="/en"><img width="175" height="48"  src="/images/easternlogo.png" alt="" ></a>
+
+                
+                <div class="navbar navbar-toggler" style="border: none;"  data-toggle="collapse">
+
+                    
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-left" id="collapsibleNavbar">
+
+                    
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/">
+                                
+                                
+                                <i data-feather="home"></i> 
+                                
+                                
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/services/">
+                                
+                                
+                                <i data-feather="services"></i> 
+                                
+                                
+                                Services
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/aboutme/">
+                                
+                                
+                                <i data-feather="about-me"></i> 
+                                
+                                
+                                About me
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/references/">
+                                
+                                
+                                <i data-feather="references"></i> 
+                                
+                                
+                                References
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/contact/">
+                                
+                                
+                                <i data-feather="contact"></i> 
+                                
+                                
+                                Contact
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/blog/">
+                                
+                                
+                                <i data-feather="pen-tool"></i> 
+                                
+                                
+                                Blog
+                            </a>
+                        </li>
+                        
+
+                        
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="content">
+<div class="bg-dark">
+    <div class="container">
+        <div class="row bg-dark text-white" >
+            <div class="col-md-12">
+                <h1>Workplace and VDI test automation with PowerShell</h1>
+            </div>
+        </div>
+        <div class="row bg-dark text-white" >
+            <div class="col-md-8 text-secondary mt-1 mb-3">
+                Making test automation with PowerShell in Windows
+            </div>
+            <div class="col-md-4 text-secondary mb-2">
+
+                
+                    Tags:
+
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/vdi">vdi</a>
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/powershell">powershell</a>
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/windows">windows</a>
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/automation">automation</a>
+                    
+                
+
+
+                
+                    
+                    
+
+                    | <time datetime="2015-09-14">Sep 14, 2015</time>
+
+                
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row text-dark bg-white" >
+        <div class="col-12 content">
+
+            <h1 id="why-to-do-test-automation-with-powershell">Why to do test automation with PowerShell?</h1>
+<p>I was involved in a project to implement a new Virtual Desktop Infrastructure (VDI) within a large company</p>
+<p>To ensure the environment is stable and well-functioning all the time on the same way, I made a script to test the basic functionality of the virtual desktop image. The script also measures the time it takes to complete an action, so this can be used to set a baseline for performance measurement.</p>
+<p>The basic functionality which is scripted is:</p>
+<ul>
+<li>Start Outlook and Send an email</li>
+<li>Can the user browse the internet</li>
+<li>Open a Word document, Print Preview, Print, and save the document</li>
+<li>Open an Excel sheet, Save it under a different name</li>
+<li>Browse the AppV content store</li>
+<li>Start an AppV application</li>
+</ul>
+<p>Other actions can be scripted as well and added to the script.</p>
+<p>When the script has run completely with success it will ensure you that the basic functionality is still working.</p>
+<h1 id="see-the-script-in-action">See the script in action</h1>
+<p>This video gives a quick overview what kind of actions are scripted and how it works.</p>
+
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/140209894?h=d9a2bd582f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Workplace and VDI test automation with PowerShell"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<p>Workplace and VDI test automation with PowerShell from EasternNL on Vimeo.</p>
+<h1 id="what-kind-of-results-do-the-script-make">What kind of results do the script make?</h1>
+<p>When using the script a PDF document is generated which shows the following for each step:</p>
+<p><img src="images/2015-09-23_164405.png" alt=""></p>
+<p>An example PDF document can be found here: <a href="attachements/2015-09-23-163927-Workplace-and-VDI-test-automation-with-PowerShell.pdf">2015-09-23 163927 Workplace and VDI test-automation with PowerShell.pdf</a></p>
+<p>Also an .su file is generated which has the following content:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>2015-08-26    07:23:13.439    07:23:14.48    0.6092069    Excel - start    C:\Users\Erik\AppData\Local\Temp\2015-08-26 07.23.13.439 Excel - start.png
+</span></span></code></pre></div><p>This file is tab-separated and can be imported in Excel or other tools for further investigation.</p>
+<p>An example SU file can be found here: <a href="attachements/test.su.txt">test.su</a></p>
+<h1 id="my-baseline-tools">My baseline tools</h1>
+<p>The script is tested on:</p>
+<ul>
+<li>Windows 7 with Office 2010</li>
+<li>Windows 10 with Office 2013</li>
+</ul>
+<p>Powershell version 3 or higher is enough to run this script. I am sure this will work on other platforms like Windows 8 e.g. as well.</p>
+<p>The iTextSharp module is needed to generate the PDF’s and can be found here:
+<a href="http://sourceforge.net/projects/itextsharp/">http://sourceforge.net/projects/itextsharp/</a></p>
+<p>Boxcutter.exe is used to make screenshots during the test. Boxcutter can be found here: <a href="http://keepnote.org/boxcutter/">http://keepnote.org/boxcutter/</a></p>
+<h1 id="script-code">Script code</h1>
+<p>Basically the following code is needed to start Excel:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#bb60d5">$excel</span> = <span style="color:#007020">new-object</span> -comobject Excel.Application
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#bb60d5">$excel</span>.visible = $True
+</span></span></code></pre></div><p>Other example is the code to start Internet Explorer:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#bb60d5">$ie</span> = <span style="color:#007020">new-object</span> -com <span style="color:#4070a0">&#34;InternetExplorer.Application&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#bb60d5">$ie</span>.visible = $true
+</span></span></code></pre></div><p>(In a second blog item I will explain how to do the automation of browsing on the internet.)</p>
+<p>Basically it is simple, however in my coding some extra steps are involved to measure the start of Excel, and to make a screenshot to ensure everything went well. The Write-Transaction function is included in my module and will write the measured times to the .su file and take the screenshot as well.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Excel - start&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>            <span style="color:#bb60d5">$excel</span> = <span style="color:#007020">new-object</span> -comobject Excel.Application
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>            <span style="color:#bb60d5">$excel</span>.visible = $True
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>            } )
+</span></span></code></pre></div><p>In the end of the script the complete .su file is converted to PDF format together with the screenshots.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Windows endpoint testing, for VDI but also for physical desktop can be done with scripts. When launching every day, and eventually on different times of a day the performance and functionality of an Windows desktop can be measured.</p>
+<h1 id="the-complete-script">The complete script</h1>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  1</span><span><span style="color:#60a0b0;font-style:italic"># load the modules</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  2</span><span><span style="color:#007020">Import-Module</span> <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">Split-Path</span> -parent <span style="color:#bb60d5">$PSCommandPath</span>)<span style="color:#4070a0">\Test-Availability.psm1&#34;</span> -Force
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  3</span><span><span style="color:#007020">Import-Module</span> <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">Split-Path</span> -parent <span style="color:#bb60d5">$PSCommandPath</span>)<span style="color:#4070a0">\iTextSharp.psm1&#34;</span> -Force
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  4</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  5</span><span><span style="color:#60a0b0;font-style:italic"># -------------------------------------------</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  6</span><span><span style="color:#60a0b0;font-style:italic"># configure variabeles</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  7</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  8</span><span><span style="color:#bb60d5">$testdocument</span> = <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">Split-Path</span> -parent <span style="color:#bb60d5">$PSCommandPath</span>)<span style="color:#4070a0">\testdocument.docx&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">  9</span><span><span style="color:#bb60d5">$testworkbook</span> = <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">Split-Path</span> -parent <span style="color:#bb60d5">$PSCommandPath</span>)<span style="color:#4070a0">\testworkbook.xlsx&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 10</span><span><span style="color:#bb60d5">$printer</span> = <span style="color:#4070a0">&#34;Bullzip PDF Printer&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 11</span><span><span style="color:#bb60d5">$appvcontentstore</span> = <span style="color:#4070a0">&#34;C:\AppV&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 12</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 13</span><span><span style="color:#60a0b0;font-style:italic"># -------------------------------------------</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 14</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 15</span><span><span style="color:#60a0b0;font-style:italic"># Stop if an error has occured, will be handled by the try/catch</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 16</span><span><span style="color:#bb60d5">$ErrorActionPreference</span> = <span style="color:#4070a0">&#34;Stop&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 17</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 18</span><span><span style="color:#60a0b0;font-style:italic"># Verbose messages on</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 19</span><span><span style="color:#60a0b0;font-style:italic">#$VerbosePreference = &#34;Continue&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 20</span><span><span style="color:#60a0b0;font-style:italic"># wait time between the steps</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 21</span><span><span style="color:#bb60d5">$sleepseconds</span> = <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 22</span><span><span style="color:#60a0b0;font-style:italic"># temporary path to log the output to</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 23</span><span><span style="color:#bb60d5">$outputfile</span> = <span style="color:#4070a0">&#34;</span>$(<span style="color:#bb60d5">$env:temp</span>)<span style="color:#4070a0">\test.su&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 24</span><span><span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Test-Path</span> <span style="color:#bb60d5">$outputfile</span>) { <span style="color:#007020">rm </span><span style="color:#bb60d5">$outputfile</span> }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 25</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 26</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 27</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 28</span><span><span style="color:#007020;font-weight:bold">try</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 29</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 30</span><span>    <span style="color:#60a0b0;font-style:italic"># Start Outlook </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 31</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Outlook - Start&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 32</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 33</span><span>            <span style="color:#bb60d5">$outlook</span> = <span style="color:#007020">new-object</span> -com <span style="color:#4070a0">&#34;Outlook.Application&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 34</span><span>            <span style="color:#60a0b0;font-style:italic">#$outlook.visible = $true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 35</span><span>            <span style="color:#bb60d5">$namespace</span> = <span style="color:#bb60d5">$outlook</span>.GetNamespace(<span style="color:#4070a0">&#34;MAPI&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 36</span><span>            <span style="color:#bb60d5">$folder</span> = <span style="color:#bb60d5">$namespace</span>.GetDefaultFolder(<span style="color:#40a070">16</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 37</span><span>            <span style="color:#bb60d5">$folder</span>.Display()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 38</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 39</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 40</span><span>        <span style="color:#60a0b0;font-style:italic"># Write email</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 41</span><span>        <span style="color:#60a0b0;font-style:italic"># (not sending an email because that is blocked by default in Outlook)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 42</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Outlook - Write message in draft&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 43</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 44</span><span>            <span style="color:#bb60d5">$mail</span> = <span style="color:#bb60d5">$outlook</span>.CreateItem(<span style="color:#40a070">0</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 45</span><span>            <span style="color:#bb60d5">$mail</span>.Subject = <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">Get-Date</span> -format <span style="color:#4070a0">&#34;yyyy-MM-dd HH:mm:ss&#34;</span>)<span style="color:#4070a0"> VDI Test Script&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 46</span><span>            <span style="color:#bb60d5">$mail</span>.To = <span style="color:#4070a0">&#34;user@domain.com&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 47</span><span>            <span style="color:#bb60d5">$mail</span>.Body = <span style="color:#4070a0">&#34;Testing the VDI functionality with a script&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 48</span><span>            <span style="color:#bb60d5">$mail</span>.save()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 49</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 50</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 51</span><span>        <span style="color:#60a0b0;font-style:italic"># Close Outlook </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 52</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Outlook - Exit&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 53</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 54</span><span>            <span style="color:#bb60d5">$outlook</span>.Quit()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 55</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 56</span><span>             
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 57</span><span>    <span style="color:#60a0b0;font-style:italic"># Internet Explorer - eastern.nl</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 58</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Internet Explorer - Start&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 59</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 60</span><span>            <span style="color:#bb60d5">$ie</span> = <span style="color:#007020">new-object</span> -com <span style="color:#4070a0">&#34;InternetExplorer.Application&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 61</span><span>            <span style="color:#bb60d5">$ie</span>.visible = $true
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 62</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 63</span><span>            <span style="color:#007020">Set-ForegroundWindow</span> <span style="color:#4070a0">&#34;Internet Explorer&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 64</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 65</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 66</span><span>        <span style="color:#60a0b0;font-style:italic"># navigate</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 67</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Internet Explorer - www.eastern.nl&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 68</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 69</span><span>            <span style="color:#bb60d5">$ie</span>.Navigate(<span style="color:#4070a0">&#34;http://www.eastern.nl/&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 70</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 71</span><span>            <span style="color:#60a0b0;font-style:italic"># wait until the page is ready, all parameters okay and the text Erik van Oost is inside the document</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 72</span><span>            <span style="color:#007020">Wait-InternetExplorer</span> -ie <span style="color:#bb60d5">$ie</span> -text <span style="color:#4070a0">&#34;Erik van Oost&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 73</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 74</span><span>         
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 75</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Internet Explorer - Quit&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 76</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 77</span><span>            <span style="color:#60a0b0;font-style:italic"># Internet Explorer Exit</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 78</span><span>            <span style="color:#bb60d5">$ie</span>.quit()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 79</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 80</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 81</span><span>        <span style="color:#60a0b0;font-style:italic"># Word</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 82</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Word - Start&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 83</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 84</span><span>            <span style="color:#bb60d5">$word</span>=<span style="color:#007020">new-object</span> -ComObject <span style="color:#4070a0">&#34;Word.Application&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 85</span><span>            <span style="color:#bb60d5">$word</span>.visible = $true
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 86</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 87</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 88</span><span>        <span style="color:#60a0b0;font-style:italic"># Document open </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 89</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Word - Open testfile&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 90</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 91</span><span>            <span style="color:#bb60d5">$doc</span> = <span style="color:#bb60d5">$word</span>.Documents.Open(<span style="color:#bb60d5">$testdocument</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 92</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 93</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 94</span><span>        <span style="color:#60a0b0;font-style:italic"># Document saven op temp</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 95</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Word - Save testfile&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 96</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 97</span><span>            <span style="color:#bb60d5">$filename</span> = <span style="color:#4070a0">&#34;</span>$(<span style="color:#bb60d5">$env:temp</span>)<span style="color:#4070a0">\test.docx&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 98</span><span>            <span style="color:#bb60d5">$file_formatcode</span> = <span style="color:#40a070">12</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 99</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">100</span><span>            <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#007020">Test-Path</span> filename) { <span style="color:#007020">rm </span><span style="color:#bb60d5">$filename</span> -Force -ErrorAction SilentlyContinue }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">101</span><span>            <span style="color:#bb60d5">$doc</span>.SaveAs([<span style="color:#60add5">ref</span>]<span style="color:#bb60d5">$filename</span>, [<span style="color:#60add5">ref</span>]<span style="color:#bb60d5">$file_formatcode</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">102</span><span>        } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">103</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">104</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Word - Print preview&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">105</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">106</span><span>            <span style="color:#bb60d5">$doc</span>.PrintPreview()        
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">107</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">108</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">109</span><span>        <span style="color:#60a0b0;font-style:italic">&lt;#
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">110</span><span><span style="color:#60a0b0;font-style:italic">        $transactionname = &#34;Word - Print&#34;
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">111</span><span><span style="color:#60a0b0;font-style:italic">        Write-Transaction -transactionname $transactionname -sleepseconds $sleepseconds -outputfile $outputfile -screenshot $true -measured ( Measure-Command {
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">112</span><span><span style="color:#60a0b0;font-style:italic">            # set active printer             
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">113</span><span><span style="color:#60a0b0;font-style:italic">            $word.activeprinter = $printer
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">114</span><span><span style="color:#60a0b0;font-style:italic">             
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">115</span><span><span style="color:#60a0b0;font-style:italic">            # Document afdrukken
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">116</span><span><span style="color:#60a0b0;font-style:italic">            $doc.PrintOut([ref]$false)
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">117</span><span><span style="color:#60a0b0;font-style:italic">            } )
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">118</span><span><span style="color:#60a0b0;font-style:italic">        #&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">119</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">120</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Word - Quit&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">121</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">122</span><span>            <span style="color:#60a0b0;font-style:italic"># Close document</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">123</span><span>            <span style="color:#bb60d5">$doc</span>.Close()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">124</span><span>            <span style="color:#60a0b0;font-style:italic"># Exit Word</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">125</span><span>            <span style="color:#bb60d5">$word</span>.Quit()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">126</span><span>                } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">127</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">128</span><span>    <span style="color:#60a0b0;font-style:italic"># Start Excel </span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">129</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Excel - start&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">130</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">131</span><span>            <span style="color:#bb60d5">$excel</span> = <span style="color:#007020">new-object</span> -comobject Excel.Application
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">132</span><span>            <span style="color:#bb60d5">$excel</span>.visible = $True
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">133</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">134</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">135</span><span>        <span style="color:#60a0b0;font-style:italic"># Open workbook</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">136</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Excel - Open testfile&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">137</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">138</span><span>            <span style="color:#bb60d5">$wb</span> = <span style="color:#bb60d5">$excel</span>.Workbooks.Open(<span style="color:#bb60d5">$testworkbook</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">139</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">140</span><span>     
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">141</span><span>        <span style="color:#60a0b0;font-style:italic"># Save workbook</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">142</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Excel - Save testfile&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">143</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">144</span><span>            <span style="color:#bb60d5">$filename</span> = <span style="color:#4070a0">&#34;</span>$(<span style="color:#bb60d5">$env:temp</span>)<span style="color:#4070a0">\test.xlsx&#34;</span>       
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">145</span><span>            <span style="color:#bb60d5">$excel</span>.displayalerts = $false
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">146</span><span>            <span style="color:#bb60d5">$wb</span>.SaveAs(<span style="color:#bb60d5">$filename</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">147</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">148</span><span>         
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">149</span><span>    <span style="color:#60a0b0;font-style:italic"># Close Excel</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">150</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;Excel - Quit&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">151</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">152</span><span>            <span style="color:#bb60d5">$excel</span>.quit()
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">153</span><span>        } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">154</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">155</span><span>    <span style="color:#60a0b0;font-style:italic"># Visit AppV Content Store</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">156</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;AppV - ContentStore&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">157</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#bb60d5">$sleepseconds</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">158</span><span>            <span style="color:#bb60d5">$app</span> = <span style="color:#007020">Start-Process</span> cmd.exe -PassThru -ArgumentList <span style="color:#4070a0">&#34; /k dir </span><span style="color:#4070a0;font-weight:bold">`&#34;</span>$(<span style="color:#bb60d5">$appvcontentstore</span>)<span style="color:#4070a0;font-weight:bold">`&#34;</span><span style="color:#4070a0"> /ogneds&#34;</span> -WorkingDirectory <span style="color:#4070a0">&#34;C:\&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">159</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">160</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">161</span><span>         
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">162</span><span>            <span style="color:#60a0b0;font-style:italic"># Content store Sluiten</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">163</span><span>            <span style="color:#007020">Stop-Process</span> -Id <span style="color:#bb60d5">$app</span>.Id 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">164</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">165</span><span>    <span style="color:#60a0b0;font-style:italic"># AppV Application</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">166</span><span>    <span style="color:#60a0b0;font-style:italic"># %ALLUSERSPROFILE%\Microsoft\AppV\Client\Integration\4C39F850-61B3-4ED5-95E0-0F21C0B6D0BB\Root\DLS.exe</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">167</span><span>        <span style="color:#bb60d5">$transactionname</span> = <span style="color:#4070a0">&#34;AppV Application Dymo Label Writer&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">168</span><span>        <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#bb60d5">$transactionname</span> -sleepseconds <span style="color:#40a070">5</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">169</span><span>            <span style="color:#bb60d5">$app</span> = <span style="color:#007020">Start-Process</span>  C:\ProgramData\Microsoft\AppV\Client\Integration\4C39F850-61B3-4ED5-<span style="color:#40a070">95E0</span>-0F21C0B6D0BB\Root\DLS.exe -PassThru
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">170</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">171</span><span>            } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">172</span><span>         
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">173</span><span>            <span style="color:#60a0b0;font-style:italic"># Content store Sluiten</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">174</span><span>            <span style="color:#007020">Stop-Process</span> -Id <span style="color:#bb60d5">$app</span>.Id 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">175</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">176</span><span>    
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">177</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">178</span><span>    <span style="color:#60a0b0;font-style:italic"># End of test</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">179</span><span>        <span style="color:#bb60d5">$result</span> = <span style="color:#007020">Show-PopUp</span> -Message <span style="color:#4070a0">&#34;Test ended sucessfully&#34;</span> -Title <span style="color:#4070a0">&#34;Test Automation&#34;</span> -ButtonSet OK -IconType Information
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">180</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">181</span><span><span style="color:#007020;font-weight:bold">catch</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">182</span><span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">183</span><span>    <span style="color:#60a0b0;font-style:italic"># log if an error occurs, including a screenshot with the error</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">184</span><span>    <span style="color:#bb60d5">$Error</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">185</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">186</span><span>    <span style="color:#007020">Write-Transaction</span> -transactionname <span style="color:#4070a0">&#34;ERROR </span><span style="color:#bb60d5">$transactionname</span><span style="color:#4070a0">&#34;</span> -sleepseconds <span style="color:#40a070">0</span> -outputfile <span style="color:#bb60d5">$outputfile</span> -screenshot $true -measured ( <span style="color:#007020">Measure-Command</span> { <span style="color:#007020">sleep </span>-Milliseconds <span style="color:#40a070">100</span> } )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">187</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">188</span><span>    <span style="color:#bb60d5">$result</span> = <span style="color:#007020">Show-PopUp</span> -Message <span style="color:#4070a0">&#34;Test ended with error&#34;</span> -Title <span style="color:#4070a0">&#34;Test Automation&#34;</span> -ButtonSet OK -IconType Exclamation
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">189</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">190</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">191</span><span><span style="color:#60a0b0;font-style:italic"># Ask for conversion to PDF</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">192</span><span>    <span style="color:#bb60d5">$result</span> = <span style="color:#007020">Show-PopUp</span> -Message <span style="color:#4070a0">&#34;Do you want to write the results to a PDF file?&#34;</span> -Title <span style="color:#4070a0">&#34;PDF file&#34;</span> -ButtonSet YNC -IconType Question
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">193</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">194</span><span>    <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#bb60d5">$result</span> <span style="color:#666">-eq</span> <span style="color:#40a070">6</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">195</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">196</span><span>        <span style="color:#60a0b0;font-style:italic"># when in an Citrix Session log some information about Citrix</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">197</span><span>        <span style="color:#bb60d5">$sessioninfo</span> = (<span style="color:#007020">Get-ItemProperty</span> -Path HKLM<span style="">:</span>SOFTWARE\Citrix\ICA\Session -ErrorAction SilentlyContinue )
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">198</span><span>        <span style="color:#bb60d5">$outputpdf</span> = (<span style="color:#007020">Get-FileName</span> -defaultFileName <span style="color:#4070a0">&#34;</span>$(<span style="color:#007020">get-date</span> ((<span style="color:#007020">ls </span><span style="color:#bb60d5">$outputfile</span>).CreationTime) -Format <span style="color:#4070a0">&#34;yyyy-MM-dd HHmmss&#34;</span>)<span style="color:#4070a0"> Workplace and VDI test-automation with PowerShell.pdf&#34;</span> )        
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">199</span><span>        <span style="color:#bb60d5">$message</span> = <span style="color:#4070a0">&#34;VDI Desktop Image testscript run on </span>$(<span style="color:#007020">get-date</span> -Format <span style="color:#4070a0">&#34;yyyy-MM-dd HH:mm&#34;</span>)<span style="color:#4070a0">. </span><span style="color:#4070a0;font-weight:bold">`n`n</span><span style="color:#4070a0">Output PDF: </span>$(<span style="color:#007020">split-path</span> <span style="color:#bb60d5">$outputpdf</span> -leaf)<span style="color:#4070a0;font-weight:bold">`n</span><span style="color:#4070a0">Computername: </span>$(<span style="color:#bb60d5">$env:computername</span>)<span style="color:#4070a0;font-weight:bold">`n</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">200</span><span>        <span style="color:#60a0b0;font-style:italic"># when in an Citrix Session log some information about Citrix</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">201</span><span>        <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#bb60d5">$sessioninfo</span> <span style="color:#666">-ne</span> $null)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">202</span><span>        {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">203</span><span>            <span style="color:#bb60d5">$message</span> += <span style="color:#4070a0">&#34;Clientaddress: </span>$(<span style="color:#bb60d5">$sessioninfo</span>.clientaddress)<span style="color:#4070a0"> </span><span style="color:#4070a0;font-weight:bold">`n</span><span style="color:#4070a0">Clientname: </span>$(<span style="color:#bb60d5">$sessioninfo</span>.clientname)<span style="color:#4070a0"> </span><span style="color:#4070a0;font-weight:bold">`n</span><span style="color:#4070a0">Clientversion: </span>$(<span style="color:#bb60d5">$sessioninfo</span>.clientversion)<span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">204</span><span>        }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">205</span><span>        <span style="color:#bb60d5">$message</span> += <span style="color:#4070a0">&#34;</span><span style="color:#4070a0;font-weight:bold">`n`n</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">206</span><span>        <span style="color:#007020">convert-su</span>-to-pdf -inputsu <span style="color:#bb60d5">$outputfile</span> -outputpdf <span style="color:#bb60d5">$outputpdf</span> -title <span style="color:#4070a0">&#34;Desktop Image functional Script&#34;</span> -message <span style="color:#bb60d5">$message</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">207</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">208</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">209</span><span><span style="color:#60a0b0;font-style:italic"># ask for logoff</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">210</span><span>    <span style="color:#bb60d5">$result</span> = <span style="color:#007020">Show-PopUp</span> -Message <span style="color:#4070a0">&#34;Do you want to logoff?&#34;</span> -Title <span style="color:#4070a0">&#34;Logoff&#34;</span> -ButtonSet YNC -IconType Question
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">211</span><span> 
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">212</span><span>    <span style="color:#007020;font-weight:bold">if</span> (<span style="color:#bb60d5">$result</span> <span style="color:#666">-eq</span> <span style="color:#40a070">6</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">213</span><span>    {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">214</span><span>        <span style="color:#007020">start-process</span> logoff
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">215</span><span>    }
+</span></span></code></pre></div><h1 id="download">Download</h1>
+<p>Download the script, module and test-files here: <a href="attachements/sources.zip">sources.zip</a></p>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+        </div><footer class="mt-auto bg-dark">
+    <div class="container">
+        
+        <div class="row bg-dark text-white mt-3">
+
+
+                    <div class="col-md-3">
+                        <p class="text-uppercase">About Me</p>
+                        <p>
+                            <i class="fas fa-info"></i>  Erik van Oost has been an IT-freelancer since 2003. His passion for working with computers &amp; people brings him to many places where he works with to improve the IT performance.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <p class="text-uppercase">Contact</p>
+                        <p>
+                            <i class="fas fa-phone-volume"></i> <a class="text-white" href="tel:+31655118025">+31 6 55 118 025</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <a class="text-white" href="mailto:erik@eastern.nl">erik@eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-globe"></i> <a class="text-white" href="http://www.eastern.nl">www.eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker"></i> Balustrade 20 7325 GP Apeldoorn, The Netherlands
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <p class="text-uppercase">Follow on</p>
+                        <p>
+                            <i class="fab fa-twitter"></i> <a class="text-white" href="https://twitter.com/eastern_nl">Twitter</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-linkedin-in"></i> <a class="text-white" href="http://nl.linkedin.com/in/erikvanoost">LinkedIn</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-github"></i> <a class="text-white" href="http://github.com/easternnl/">Github</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-clipboard"></i> <a class="text-white" href="http://pastebin.com/u/easternnl">Pastebin</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-docker"></i> <a class="text-white" href="https://hub.docker.com/u/easternnl">Docker Hub</a>
+                        </p>
+                    </div>
+
+                   <div class="col-md-3">
+                        <p class="text-uppercase"> Blog</p>
+                        
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/vdi-performance-summit/">VDI Performance Summit</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/run-or-enable-microsoft-app-v-client-on-windows-10-anniversary-update/">Run and enable Microsoft App-V client on Windows 10 Anniversary Update</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/clock-application-with-milliseconds/">Clock application with milliseconds</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/">Detailed logon information from Citrix Director</a></p>
+                            
+                       
+                            
+                       
+                    </div>
+
+
+
+        </div>
+        <div class="row bg-dark text-white">
+            <hr>
+        </div>
+        <div class="row bg-dark text-white ">
+            <div class="col-7">
+                <p class="text-uppercase text-left">Copyright (C) Eastern 2005 - 2022</p>
+            </div>
+            <div class="col-5">
+                <p class="text-uppercase text-right">
+                    <a class="text-white" href="/documents/nederland-ict-voorwaarden-2014.pdf"> Terms &amp; conditions</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+<script src="/js/jquery-3.6.1.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/feather.min.js"></script></body>
+</html>

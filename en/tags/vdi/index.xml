@@ -15,7 +15,17 @@
       <guid>https://www.eastern.nl/en/blog/vdi-performance-summit/</guid>
       <description>&lt;p&gt;On 29th january I visited the VDI Performance Summit which was organized by LoginVSI. Login VSI provides performance insights for virtualized desktop environments such as Citrix XenApp, XenDesktop, Microsoft RDS and VMware Horizon View.
 The summit was, of course, organized around the LoginVSI tool. In this blog post I will tell you the 5 quick takes of the conference.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt; &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;  &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Workplace and VDI test automation with PowerShell</title>
+      <link>https://www.eastern.nl/en/blog/workplace-and-vdi-test-automation-with-powershell/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/workplace-and-vdi-test-automation-with-powershell/</guid>
+      <description>Why to do test automation with PowerShell? I was involved in a project to implement a new Virtual Desktop Infrastructure (VDI) within a large company
+To ensure the environment is stable and well-functioning all the time on the same way, I made a script to test the basic functionality of the virtual desktop image. The script also measures the time it takes to complete an action, so this can be used to set a baseline for performance measurement.</description>
     </item>
     
   </channel>

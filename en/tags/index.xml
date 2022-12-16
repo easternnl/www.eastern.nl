@@ -25,5 +25,86 @@
       <description></description>
     </item>
     
+    <item>
+      <title>appv</title>
+      <link>https://www.eastern.nl/en/tags/appv/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/appv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://www.eastern.nl/en/tags/windows/</link>
+      <pubDate>Fri, 19 Aug 2016 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clock</title>
+      <link>https://www.eastern.nl/en/tags/clock/</link>
+      <pubDate>Wed, 20 Jul 2016 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/clock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>citrix</title>
+      <link>https://www.eastern.nl/en/tags/citrix/</link>
+      <pubDate>Tue, 01 Dec 2015 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/citrix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://www.eastern.nl/en/tags/automation/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://www.eastern.nl/en/tags/powershell/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos</title>
+      <link>https://www.eastern.nl/en/tags/centos/</link>
+      <pubDate>Tue, 16 Dec 2014 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://www.eastern.nl/en/tags/linux/</link>
+      <pubDate>Tue, 16 Dec 2014 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vmware</title>
+      <link>https://www.eastern.nl/en/tags/vmware/</link>
+      <pubDate>Tue, 16 Dec 2014 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/tags/vmware/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

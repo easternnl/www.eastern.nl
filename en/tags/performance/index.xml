@@ -15,7 +15,29 @@
       <guid>https://www.eastern.nl/en/blog/vdi-performance-summit/</guid>
       <description>&lt;p&gt;On 29th january I visited the VDI Performance Summit which was organized by LoginVSI. Login VSI provides performance insights for virtualized desktop environments such as Citrix XenApp, XenDesktop, Microsoft RDS and VMware Horizon View.
 The summit was, of course, organized around the LoginVSI tool. In this blog post I will tell you the 5 quick takes of the conference.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt; &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;images/vdi-performance-summit.jpg&#34;&gt;&lt;img src=&#34;images/vdi-performance-summit.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;  &lt;a href=&#34;images/i-love-a-good-performance.jpg&#34;&gt;&lt;img src=&#34;images/i-love-a-good-performance.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Clock application with milliseconds</title>
+      <link>https://www.eastern.nl/en/blog/clock-application-with-milliseconds/</link>
+      <pubDate>Wed, 20 Jul 2016 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/clock-application-with-milliseconds/</guid>
+      <description>&lt;p&gt;The clock application with milliseconds which run always on top! This little tool is build to capture the exact time in case of an performance problem. With an extra tool for video recording it can help to record the screen of the user, and see the probably performance slowness.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;images/clock.png&#34; alt=&#34;clock picture&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Detailed logon information from Citrix Director</title>
+      <link>https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/</link>
+      <pubDate>Tue, 01 Dec 2015 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/</guid>
+      <description>&lt;h1 id=&#34;why-to-have-detailed-logon-information-from-citrix&#34;&gt;Why to have detailed logon information from Citrix?&lt;/h1&gt;
+&lt;p&gt;Sometimes anyone is asking you, the performance is not what we like. Within a Citrix environment it is easy to get into the director to see the overview of the logon times.
+By default Citrix Director gives the following information about the logon:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;images/citrix-director.png&#34;&gt;&lt;img src=&#34;images/citrix-director.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

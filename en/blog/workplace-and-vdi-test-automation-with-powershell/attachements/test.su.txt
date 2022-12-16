@@ -1,0 +1,17 @@
+2015-09-23	16:39:23.488	16:39:25.594	2.106062	Outlook - Start	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.23.488 Outlook - Start.png
+2015-09-23	16:39:27.784	16:39:27.894	0.1095054	Outlook - Write message in draft	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.27.784 Outlook - Write message in draft.png
+2015-09-23	16:39:29.945	16:39:30.39	0.0937794	Outlook - Exit	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.29.945 Outlook - Exit.png
+2015-09-23	16:39:32.89	16:39:32.649	0.5599155	Internet Explorer - Start	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.32.89 Internet Explorer - Start.png
+2015-09-23	16:39:34.739	16:39:38.930	4.1906168	Internet Explorer - www.eastern.nl	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.34.739 Internet Explorer - www.eastern.nl.png
+2015-09-23	16:39:41.27	16:39:41.115	0.0880534	Internet Explorer - Quit	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.41.27 Internet Explorer - Quit.png
+2015-09-23	16:39:43.170	16:39:44.174	1.0044129	Word - Start	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.43.170 Word - Start.png
+2015-09-23	16:39:46.236	16:39:46.621	0.3851127	Word - Open testfile	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.46.236 Word - Open testfile.png
+2015-09-23	16:39:48.643	16:39:49.55	0.4123755	Word - Save testfile	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.48.643 Word - Save testfile.png
+2015-09-23	16:39:51.82	16:39:51.722	0.6395936	Word - Print preview	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.51.82 Word - Print preview.png
+2015-09-23	16:39:53.773	16:39:54.194	0.4209312	Word - Quit	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.53.773 Word - Quit.png
+2015-09-23	16:39:56.244	16:39:57.108	0.8640143	Excel - start	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.56.244 Excel - start.png
+2015-09-23	16:39:59.147	16:40:10.333	11.1864926	Excel - Open testfile	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.39.59.147 Excel - Open testfile.png
+2015-09-23	16:40:12.385	16:40:19.356	6.9710481	Excel - Save testfile	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.40.12.385 Excel - Save testfile.png
+2015-09-23	16:40:21.440	16:40:21.475	0.0352231	Excel - Quit	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.40.21.440 Excel - Quit.png
+2015-09-23	16:40:23.539	16:40:23.591	0.0516161	AppV - ContentStore	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.40.23.539 AppV - ContentStore.png
+2015-09-23	16:40:25.703	16:40:25.844	0.1414239	AppV Application Dymo Label Writer	C:\Users\Erik\AppData\Local\Temp\2015-09-23 16.40.25.703 AppV Application Dymo Label Writer.png

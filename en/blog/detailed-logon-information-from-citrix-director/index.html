@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Get more detailed information from Citrix Director and analyze the data.">
+
+
+    
+        <meta name = "robots" content = "index"><link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/brands.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+
+    
+    
+    <title>Eastern.nl - Performance Engineering done with passion | Detailed logon information from Citrix Director</title>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@easternnl" />
+    <meta name="twitter:creator" content="@easternnl" />
+    <meta name="twitter:title" content="Eastern.nl - Performance Engineering done with passion | Detailed logon information from Citrix Director">
+    <meta name="twitter:description" content="Get more detailed information from Citrix Director and analyze the data.">
+    <meta name="twitter:image" content="https://www.eastern.nl/twitter-image.webp">
+
+    <meta property="og:title" content="Eastern.nl - Performance Engineering done with passion | Detailed logon information from Citrix Director">
+    <meta property="og:url" content="https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/" />
+    <meta property="og:locale" content="en" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.eastern.nl/og-image.webp">
+    <meta property="og:site_name" content="Eastern.nl - Performance Engineering done with passion"/>
+    <meta property="og:description" content="Get more detailed information from Citrix Director and analyze the data.">
+
+
+
+</head><body class="d-flex flex-column min-vh-100"><div class="container">
+    <div class="row">
+        <div class="col-lg-12 p-0">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                
+                <a class="navbar-brand" aria-label="Home" href="/en"><img width="175" height="48"  src="/images/easternlogo.png" alt="" ></a>
+
+                
+                <div class="navbar navbar-toggler" style="border: none;"  data-toggle="collapse">
+
+                    
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-label="Menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+
+                <div class="collapse navbar-collapse justify-content-left" id="collapsibleNavbar">
+
+                    
+                    <ul class="navbar-nav">
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/">
+                                
+                                
+                                <i data-feather="home"></i> 
+                                
+                                
+                                Home
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/services/">
+                                
+                                
+                                <i data-feather="services"></i> 
+                                
+                                
+                                Services
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/aboutme/">
+                                
+                                
+                                <i data-feather="about-me"></i> 
+                                
+                                
+                                About me
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/references/">
+                                
+                                
+                                <i data-feather="references"></i> 
+                                
+                                
+                                References
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/pages/contact/">
+                                
+                                
+                                <i data-feather="contact"></i> 
+                                
+                                
+                                Contact
+                            </a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            
+                            <a class="nav-link" href="/en/blog/">
+                                
+                                
+                                <i data-feather="pen-tool"></i> 
+                                
+                                
+                                Blog
+                            </a>
+                        </li>
+                        
+
+                        
+
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+<div id="content">
+<div class="bg-dark">
+    <div class="container">
+        <div class="row bg-dark text-white" >
+            <div class="col-md-12">
+                <h1>Detailed logon information from Citrix Director</h1>
+            </div>
+        </div>
+        <div class="row bg-dark text-white" >
+            <div class="col-md-8 text-secondary mt-1 mb-3">
+                A more detailed analysis of your logon times
+            </div>
+            <div class="col-md-4 text-secondary mb-2">
+
+                
+                    Tags:
+
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/performance">performance</a>
+                    
+                        
+                        <a class="text-secondary" href="https://www.eastern.nl/en/tags/citrix">citrix</a>
+                    
+                
+
+
+                
+                    
+                    
+
+                    | <time datetime="2015-12-01">Dec 1, 2015</time>
+
+                
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row text-dark bg-white" >
+        <div class="col-12 content">
+
+            <h1 id="why-to-have-detailed-logon-information-from-citrix">Why to have detailed logon information from Citrix?</h1>
+<p>Sometimes anyone is asking you, the performance is not what we like. Within a Citrix environment it is easy to get into the director to see the overview of the logon times.
+By default Citrix Director gives the following information about the logon:</p>
+<p><a href="images/citrix-director.png"><img src="images/citrix-director.png" alt=""></a></p>
+<p>However average is a good indication, average is not always the best method to measure something. Digging in to the numbers can be needed to get the exceptions clear.
+This blog will shortly explain how to get more detailed information from your database.</p>
+<h1 id="what-kind-of-results-do-you-get">What kind of results do you get?</h1>
+<p>My final report shows the following:</p>
+<p><a href="images/graph.png"><img src="images/graph.png" alt=""></a></p>
+<p>This gives more detailed information about how long users need to wait for a logon. The data in this graph is based on the field InteractiveDesktop from the query below.</p>
+<p>But also any table with detailed information can be made. Or query on user, query on VDI name, e.g.</p>
+<h1 id="my-baseline-tools">My baseline tools</h1>
+<p>I used the following tools to create this graph:</p>
+<pre><code>Microsoft Excel
+SQL Server Management Studio
+</code></pre>
+<p>The results of the query in SQL Server Management Studio can easily copied into Excel. With Pivot tables you can create this kind of graphs.</p>
+<h1 id="sql-code">SQL code</h1>
+<p>When you run the following query on the Monitoring Database it will give a lot of output.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#60a0b0;font-style:italic">/* Citrix Director only gives Average information about logon. 
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#60a0b0;font-style:italic">This query gives detailed and calculated information about the logontimes. */</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb"> 
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#60a0b0;font-style:italic">/****** Script for SelectTopNRows command from SSMS  ******/</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#007020;font-weight:bold">SELECT</span><span style="color:#bbb"> </span>LogonDuration<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>DATEDIFF(<span style="color:#007020;font-weight:bold">Second</span>,<span style="color:#bbb"> </span>[LogOnStartDate],<span style="color:#bbb"> </span>[LogOnEndDate])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb">      </span>,[BrokeringDuration]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb">      </span>,[AuthenticationDuration]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb">      </span>,GpoDuration<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>DATEDIFF(<span style="color:#007020;font-weight:bold">Second</span>,<span style="color:#bbb"> </span>[GpoStartDate],<span style="color:#bbb"> </span>[GpoEndDate])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb">      </span>,InteractiveDesktop<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>DATEDIFF(<span style="color:#007020;font-weight:bold">Second</span>,<span style="color:#bbb"> </span>[BrokeringDate],[InteractiveEndDate])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb">      </span>,FORMAT([BrokeringDate]<span style="color:#bbb"> </span>,<span style="color:#bbb"> </span><span style="color:#4070a0">&#39;dd-MM-yyyy&#39;</span>)<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">AS</span><span style="color:#bbb"> </span>EasyDate<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">      </span>,FORMAT([BrokeringDate]<span style="color:#bbb"> </span>,<span style="color:#bbb"> </span><span style="color:#4070a0">&#39;HH&#39;</span>)<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">AS</span><span style="color:#bbb"> </span>EasyHour<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb">      </span>,[Name]<span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">AS</span><span style="color:#bbb"> </span>VM<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb">      </span>,[ClientName]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#bbb">      </span>,[ClientAddress]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#bbb">      </span>,[ClientVersion]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#bbb">      </span>,[ConnectedViaHostName]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#bbb">      </span>,[ConnectedViaIPAddress]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#bbb">      </span>,[LaunchedViaHostName]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#bbb">      </span>,[LaunchedViaIPAddress]<span style="color:#bbb">     
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#bbb">      </span>,[LogOnStartDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#bbb">      </span>,[LogOnEndDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#bbb">      </span>,[BrokeringDuration]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#bbb">      </span>,[BrokeringDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#bbb">      </span>,[DisconnectCode]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#bbb">      </span>,[DisconnectDate]<span style="color:#bbb">     
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#bbb">      </span>,[ClientSessionValidateDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#bbb">      </span>,[ServerSessionValidateDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#bbb">      </span>,[EstablishmentDate]<span style="color:#bbb">     
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#bbb">      </span>,[AuthenticationDuration]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#bbb">      </span>,[GpoStartDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span><span style="color:#bbb">      </span>,[GpoEndDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#bbb">      </span>,[LogOnScriptsStartDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#bbb">      </span>,[LogOnScriptsEndDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#bbb">      </span>,[ProfileLoadStartDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#bbb">      </span>,[ProfileLoadEndDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#bbb">      </span>,[InteractiveStartDate]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#bbb">      </span>,[InteractiveEndDate]<span style="color:#bbb">     
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">FROM</span><span style="color:#bbb"> </span>[MonitorData].[<span style="color:#007020;font-weight:bold">Connection</span>]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">LEFT</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>[MonitorData].[<span style="color:#007020;font-weight:bold">Session</span>]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">ON</span><span style="color:#bbb"> </span>([MonitorData].[<span style="color:#007020;font-weight:bold">Connection</span>].[SessionKey]<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>[MonitorData].[<span style="color:#007020;font-weight:bold">Session</span>].[SessionKey]<span style="color:#bbb"> </span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">LEFT</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">JOIN</span><span style="color:#bbb"> </span>[MonitorData].[Machine]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">ON</span><span style="color:#bbb"> </span>([MonitorData].[<span style="color:#007020;font-weight:bold">Session</span>].[MachineId]<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>[MonitorData].[Machine].[Id])<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span><span style="color:#bbb">   
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span><span style="color:#bbb">   
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span><span style="color:#bbb">  </span><span style="color:#007020;font-weight:bold">WHERE</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">Convert</span>(<span style="color:#007020">date</span>,[LogOnStartDate])<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#007020;font-weight:bold">Convert</span>(<span style="color:#007020">date</span>,GETDATE())<span style="color:#bbb">
+</span></span></span></code></pre></div><h1 id="conclusion">Conclusion</h1>
+<p>Citrix is logging a lot of information in the database, but unfortunately the Director is not showing the information. With SQL query’s there are a lot of options to query this information.
+All details about the values in the database can be found here: support.citrix.com
+Depending on the Citrix license which is purchased, more or less information is stored in the database. Please keep in mind that old records in the database will be cleared automatically. So make you’re report on time, or create something to save the data.</p>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+        </div><footer class="mt-auto bg-dark">
+    <div class="container">
+        
+        <div class="row bg-dark text-white mt-3">
+
+
+                    <div class="col-md-3">
+                        <p class="text-uppercase">About Me</p>
+                        <p>
+                            <i class="fas fa-info"></i>  Erik van Oost has been an IT-freelancer since 2003. His passion for working with computers &amp; people brings him to many places where he works with to improve the IT performance.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <p class="text-uppercase">Contact</p>
+                        <p>
+                            <i class="fas fa-phone-volume"></i> <a class="text-white" href="tel:+31655118025">+31 6 55 118 025</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i> <a class="text-white" href="mailto:erik@eastern.nl">erik@eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-globe"></i> <a class="text-white" href="http://www.eastern.nl">www.eastern.nl</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-map-marker"></i> Balustrade 20 7325 GP Apeldoorn, The Netherlands
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <p class="text-uppercase">Follow on</p>
+                        <p>
+                            <i class="fab fa-twitter"></i> <a class="text-white" href="https://twitter.com/eastern_nl">Twitter</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-linkedin-in"></i> <a class="text-white" href="http://nl.linkedin.com/in/erikvanoost">LinkedIn</a>
+                        </p>
+                        <p>
+                            <i class="fab fa-github"></i> <a class="text-white" href="http://github.com/easternnl/">Github</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-clipboard"></i> <a class="text-white" href="http://pastebin.com/u/easternnl">Pastebin</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-docker"></i> <a class="text-white" href="https://hub.docker.com/u/easternnl">Docker Hub</a>
+                        </p>
+                    </div>
+
+                   <div class="col-md-3">
+                        <p class="text-uppercase"> Blog</p>
+                        
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/vdi-performance-summit/">VDI Performance Summit</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/run-or-enable-microsoft-app-v-client-on-windows-10-anniversary-update/">Run and enable Microsoft App-V client on Windows 10 Anniversary Update</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/clock-application-with-milliseconds/">Clock application with milliseconds</a></p>
+                            
+                                <p><a class="text-white" href="https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/">Detailed logon information from Citrix Director</a></p>
+                            
+                       
+                            
+                       
+                    </div>
+
+
+
+        </div>
+        <div class="row bg-dark text-white">
+            <hr>
+        </div>
+        <div class="row bg-dark text-white ">
+            <div class="col-7">
+                <p class="text-uppercase text-left">Copyright (C) Eastern 2005 - 2022</p>
+            </div>
+            <div class="col-5">
+                <p class="text-uppercase text-right">
+                    <a class="text-white" href="/documents/nederland-ict-voorwaarden-2014.pdf"> Terms &amp; conditions</a>
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</footer>
+<script src="/js/jquery-3.6.1.min.js"></script><script src="/js/bootstrap.min.js"></script><script src="/js/feather.min.js"></script></body>
+</html>

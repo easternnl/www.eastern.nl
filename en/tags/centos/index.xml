@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>centos on Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/tags/centos/</link>
+    <description>Recent content in centos on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Tue, 16 Dec 2014 12:57:09 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mount VMFS on Centos 7</title>
+      <link>https://www.eastern.nl/en/blog/mount-vmfs-centos-7-linux/</link>
+      <pubDate>Tue, 16 Dec 2014 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/mount-vmfs-centos-7-linux/</guid>
+      <description>&lt;h1 id=&#34;why-vmfs-on-centos-7&#34;&gt;Why VMFS on CentOS 7?&lt;/h1&gt;
+&lt;p&gt;I was running a VMware ESXi server since 4 years. In VMware ESXi the options for local storage are limited, especially when you like redundant storage. The option is to buy a Raid adapter. I decided to move to CentOS with ZFS storage.
+Moving the VM’s to a Linux disk can be done by moving all the files to a NFS share, but an another option is to mount the VMFS filesystem. This is not natively available in Linux, but with fuse and vmfs-tools you can make it available. In this article I will describe how I did the installation and movement of the VM’s.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

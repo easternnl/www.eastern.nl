@@ -5,19 +5,89 @@ html, body {
 
 .col:empty, [class^=col-]:empty { display: none; }
 
-.h1 {
-    font-weight:  bold;
-    font-size: 18px;
-}
+/* eastern custom styling below */
 
+/* for the carousel on the index page with a gray background */
 .carousel-caption {
     background: rgba(113, 113, 114, 0.8);
     border-radius: 10px;
     padding: 2px;
     text-align: center;
-    right: 20%;
+    right: 15%;
     position:absolute;
     top: unset;
     bottom:10%;
-    left: 20%;
+    left: 15%;
+    font-size: 0.8rem;
+
 }
+
+/* resize the caroussel caption to a bit lower for the h1 caption */
+.carousel-caption h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    margin-bottom: 0.2rem;
+}
+
+/* but make it bigger if the screen size is more than 544px width*/
+@media (min-width: 544px) {
+    .carousel-caption {
+        font-size: 1.0rem;
+    }
+    .carousel-caption h1 {
+        font-size: 2.0rem;
+        font-weight: bold;
+    }
+}
+
+/* custom font size for the h1 h2 and h3 blocks in the blog and content */
+.content {
+    margin-top: 1em;
+}
+.content h1 {
+    font-weight:  bold;
+    font-size: 1.5rem;
+}
+
+.content > h2 {
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.content > h3 {
+    font-weight:  bold;
+    font-size: 1.3rem;
+}
+
+.content img {
+    max-width: 100%; /* resize automatically if image bigger than content space */
+    height: auto;
+}
+
+/* yellow note on the index page with a small statement */
+.yellownote {
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    padding:1em;
+    transform: rotate(-6deg);
+    border-radius: 10px;
+    background:#ffc;
+
+}
+
+
+
+/* end of eastern */
+
+div.highlight {
+    /*max-width: 700px;*/
+    /*white-space: pre-wrap;*/
+    /*word-break: break-word;*/
+}
+div.highlight pre {
+    white-space: pre;
+
+}
+

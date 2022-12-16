@@ -18,6 +18,7 @@ Email: erik@eastern.nl
 Website: http://www.eastern.nl Mailing adresss Balustrade 20
 7325 GP Apeldoorn
 The Netherlands Other information IBAN: NL40RABO0393346072
+BIC: RABONL2U
 KvK: 08132235
 VAT: NL002033564B54 Terms and conditions Nederland ICT 2014 </description>
     </item>
@@ -38,8 +39,17 @@ VAT: NL002033564B54 Terms and conditions Nederland ICT 2014 </description>
       
       <guid>https://www.eastern.nl/en/pages/aboutme/</guid>
       <description>My name is Erik van Oost, living in Apeldoorn – The Netherlands and IT-freelancer since 2003. My passion for IT brings me to places where I work with much enjoyment for organizations who hire me.
-I have more than 10 years of work experience within IT. In the last years, I have done several large and small projects using multiple disciplines of the profession I have experience.
-For large enterprises with many workplaces I participated in the entire area around desktop life cycle management, also called IT workplace.</description>
+I have been working in IT since 2000 and have done several functions. In the last 7 years I am specialized in the area of performance testing and engineering. I have gained a lot of experience with developing, programming and analyzing performance tests.</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://www.eastern.nl/en/pages/services/</link>
+      <pubDate>Wed, 21 Sep 2022 14:04:51 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/pages/services/</guid>
+      <description>Performance testing We offer the complete journey to ensure an application has a correct performance. Starting with an intake, gather all the requirements and make a load model to run the test. Scripting the application in a proper tool like JMeter, LoadRunner and if needed extra scripting to support the test in Python, Bash, Rexx, PowerShell or other scripting languages.
+Setup proper monitoring, the preferred tooling is Telegraf, Influx and Grafana but we are open to other tools.</description>
     </item>
     
   </channel>

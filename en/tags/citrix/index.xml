@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>citrix on Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/tags/citrix/</link>
+    <description>Recent content in citrix on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Tue, 01 Dec 2015 12:57:09 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/tags/citrix/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Detailed logon information from Citrix Director</title>
+      <link>https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/</link>
+      <pubDate>Tue, 01 Dec 2015 12:57:09 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/detailed-logon-information-from-citrix-director/</guid>
+      <description>&lt;h1 id=&#34;why-to-have-detailed-logon-information-from-citrix&#34;&gt;Why to have detailed logon information from Citrix?&lt;/h1&gt;
+&lt;p&gt;Sometimes anyone is asking you, the performance is not what we like. Within a Citrix environment it is easy to get into the director to see the overview of the logon times.
+By default Citrix Director gives the following information about the logon:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;images/citrix-director.png&#34;&gt;&lt;img src=&#34;images/citrix-director.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
