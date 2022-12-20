@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on Eastern.nl - Performance Engineering done with passion</title>
+    <link>https://www.eastern.nl/en/tags/hugo/</link>
+    <description>Recent content in hugo on Eastern.nl - Performance Engineering done with passion</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>nl-NL</language>
+    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Techniques of my website</title>
+      <link>https://www.eastern.nl/en/blog/techniques-of-my-website/</link>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0200</pubDate>
+      
+      <guid>https://www.eastern.nl/en/blog/techniques-of-my-website/</guid>
+      <description>Introduction My old website was 10 years old. Ofcourse I updated it a bit in the last years, but did not make a full responsive website. But, today it will change because I made a new one from scratch.
+Hugo I was already thinking of building a new site a long time, but it is a big job to do if you want to start from scratch. Many opensource tooling websites are using GoHugo and that is the tool I wanted as well.</description>
+    </item>
+    
+  </channel>
+</rss>
