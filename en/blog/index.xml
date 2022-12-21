@@ -6,15 +6,15 @@
     <description>Recent content in Blogs on Eastern.nl - Performance Engineering done with passion</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>nl-NL</language>
-    <lastBuildDate>Thu, 01 Dec 2022 00:00:00 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 13:00:00 +0200</lastBuildDate><atom:link href="https://www.eastern.nl/en/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Techniques of my website</title>
       <link>https://www.eastern.nl/en/blog/techniques-of-my-website/</link>
-      <pubDate>Thu, 01 Dec 2022 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 21 Dec 2022 13:00:00 +0200</pubDate>
       
       <guid>https://www.eastern.nl/en/blog/techniques-of-my-website/</guid>
-      <description>Introduction My old website was 10 years old. Ofcourse I updated it a bit in the last years, but did not make a full responsive website. But, today it will change because I made a new one from scratch.
-Hugo I was already thinking of building a new site a long time, but it is a big job to do if you want to start from scratch. Many opensource tooling websites are using GoHugo and that is the tool I wanted as well.</description>
+      <description>Introduction In this post I will tell you about why and how I build my website. My previous website was already 10 years old and running WordPress. I choose for Hugo now, and made also some CI/CD integrations to get a better end result.
+Hugo I was already thinking of building a new site a long time, but it is a big job to do if you want to start from scratch.</description>
     </item>
     
     <item>
