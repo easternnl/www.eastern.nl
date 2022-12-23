@@ -201,9 +201,9 @@
 <h1 id="hugo">Hugo</h1>
 <p>I was already thinking of building a new site a long time, but it is a big job to do if you want to start from scratch.</p>
 <p>I found that many opensource tooling websites are using GoHugo and that is the tool I wanted as well. I didn&rsquo;t want WordPress anymore because of the hassle to install. And the security updates that always need to be installed.</p>
-<p>So I started learning Hugo. Hugo is build with code. I choose to build a theme my self with Bootstrap and not pick one from the available options. Building a theme is not too difficult, but a lot of tweaking was needed to get a nice result. Working with Hugo, Bootstrap, HTML and MarkDown is much more fun than editing in WordPress. With Hugo you can use your preferred editor like IntelliJ or VScode as well.</p>
+<p>So I started learning Hugo. Hugo is coding, you need to define the template how your site should look like. I choose to build a theme my self with Bootstrap and not pick one from the available options. Building a theme is not too difficult, but a lot of tweaking was needed to get a nice result. Working with Hugo, Bootstrap, HTML and Markdown is much more fun than editing in WordPress. With Hugo you can use your preferred editor like IntelliJ or VScode as well.</p>
 <p><img src="images/editting-hugo-in-intellij.png" alt=""></p>
-<p>With a commandline tool you can start the Hugo server on your development computer. If you then open the browser to view the final result, it automatically refreshes on changes when you continue with coding.</p>
+<p>With a command line tool you can start the Hugo server on your development computer. If you then open the browser to view the final result, it automatically refreshes on changes when you continue with coding.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>hugo server -D
 </span></span></code></pre></div><p>In the end a website will be generated which is basically static HTML and CSS. This makes it very fast and simple. If you are going to host that site, it gives you a lot of options because you only need a HTTP server. No databases, php versions etc. are involved anymore. My site is currently hosted on Github Pages, but almost all providers are possible as well.</p>
 <h1 id="cicd-and-unlighthouse">CI/CD and Unlighthouse</h1>
@@ -214,14 +214,14 @@
 <li>Google Lighthouse for speed checking - with Unlighthouse. (<a href="https://unlighthouse.dev/">https://unlighthouse.dev/</a>)</li>
 <li>Robot Frame work to check if the pages have the content I really like (yes, you can make a type in Hugo which will break your website) (<a href="https://robotframework.org/">https://robotframework.org/</a>)</li>
 </ul>
-<p>Most of this tools are quitte common, even Lighthouse. But I found this tool fascinating: Unlighthouse. Basically it is a wrapper around Lighthouse, but a good one. First it indexes the complete site and later it will make a report for all pages together. If you need more detail, it is possible to drilldown to the original Lighthouse report. It looks as follow:</p>
+<p>Most of this tools are quite common, even Lighthouse. But I found this tool fascinating: Unlighthouse. Basically it is a wrapper around Lighthouse, but a good one. First it indexes the complete site and later it will make a report for all pages together. If you need more detail, it is possible to drilldown to the original Lighthouse report. It looks as follow:</p>
 <p><img src="images/unlighthouse.png" alt=""></p>
 <p>Visit this site for more information about <a href="https://unlighthouse.dev/">Unlighthouse</a>, and this for a <a href="https://inspect.unlighthouse.dev/">public demo</a> of the Unlighthouse report:</p>
 <p>I have setup a Github Actions pipeline to run all the tests and validations. It looks as follows:</p>
 <p><img src="images/github-actions-result-overview.png" alt=""></p>
 <p>The YAML files are also included in this blog post.</p>
 <h1 id="verdict">Verdict</h1>
-<p>Working with Hugo is more fun than working with Wordpress. With Hugo you have the complete control of the website. If a static website meets your requirements, then it is good to consider using Hugo.</p>
+<p>Working with Hugo is more fun than working with WordPress. With Hugo you have the complete control of the website. If a static website meets your requirements, then it is good to consider using Hugo.</p>
 <p>Why I choose for Hugo?</p>
 <ul>
 <li>All source code in Git</li>
@@ -229,7 +229,7 @@
 <li>Runs on Windows, Linux and Mac</li>
 <li>Use your favorite editor like IntelliJ or VScode</li>
 <li>Easy and cheap hosting, no database, php e.g. needed</li>
-<li>Write blog posts in Mark Down</li>
+<li>Write blog posts in Markdown</li>
 <li>Designed for performance</li>
 </ul>
 <p>Any comment? Please drop me a message.</p>
